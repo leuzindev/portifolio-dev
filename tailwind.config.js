@@ -38,6 +38,8 @@ module.exports = {
         card: '#1D2433',
         decorator: '#1B1433',
         background: '#111827',
+        footer: '#030712',
+        inputs: '#1F2937',
       },
       boxShadow: {
         button:

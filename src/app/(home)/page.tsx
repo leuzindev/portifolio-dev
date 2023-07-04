@@ -1,3 +1,4 @@
+import CertificatesSection from '@/components/CertificatesSection'
 import { Hero } from '@/components/Hero'
 import { ProjectsSection } from '@/components/ProjectsSection'
 import { TechSection } from '@/components/TechsSection'
@@ -13,6 +14,7 @@ export default function Home() {
       <main className="m-auto mt-12 max-w-[1200px] p-6 lg:mt-0">
         <TechSection />
         <ProjectsSection />
+        <CertificatesSection />
       </main>
     </>
   )

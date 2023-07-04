@@ -27,7 +27,7 @@ export function Project({
     <>
       {especial ? (
         <div
-          className={`relative my-36 flex md:flex-col ${
+          className={`relative my-36 flex sm:my-24 md:flex-col ${
             reverse ? 'flex-row-reverse' : ''
           } `}
         >
@@ -55,7 +55,7 @@ export function Project({
         </div>
       ) : (
         <div
-          className={`my-36 flex md:flex-col ${
+          className={`my-36 flex sm:my-24 md:flex-col ${
             reverse ? 'flex-row-reverse' : ''
           } `}
         >
