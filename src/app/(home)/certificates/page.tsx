@@ -14,34 +14,36 @@ export default function Certificates() {
           description="Aqui você poderá ver alguns dos trabalhos que eu desenvolvi. Navegue à vontade e explore os projetos para ver como foram criados, as tecnologias utilizadas e as funcionalidades implementadas."
         />
       </div>
-      <main className="m-auto mt-28 grid w-[1200px] grid-cols-3 gap-6">
-        <Image src={certificateImg} alt="um ceritificado" />
-        <Image src={certificateImg} alt="um ceritificado" />
-        <Image src={certificateImg} alt="um ceritificado" />
-        <Image src={certificateImg} alt="um ceritificado" />
-        <Image src={certificateImg} alt="um ceritificado" />
-        <Image src={certificateImg} alt="um ceritificado" />
-        <Image src={certificateImg} alt="um ceritificado" />
-        <Image src={certificateImg} alt="um ceritificado" />
-        <Image src={certificateImg} alt="um ceritificado" />
-        <Image src={certificateImg} alt="um ceritificado" />
-        <Image src={certificateImg} alt="um ceritificado" />
-        <Image src={certificateImg} alt="um ceritificado" />
-        <Image src={certificateImg} alt="um ceritificado" />
-        <Image src={certificateImg} alt="um ceritificado" />
-        <Image src={certificateImg} alt="um ceritificado" />
-        <Image src={certificateImg} alt="um ceritificado" />
-        <Image src={certificateImg} alt="um ceritificado" />
-        <Image src={certificateImg} alt="um ceritificado" />
-        <Image src={certificateImg} alt="um ceritificado" />
-        <Image src={certificateImg} alt="um ceritificado" />
-        <Image src={certificateImg} alt="um ceritificado" />
-        <Image src={certificateImg} alt="um ceritificado" />
-        <Image src={certificateImg} alt="um ceritificado" />
-        <Image src={certificateImg} alt="um ceritificado" />
-        <Image src={certificateImg} alt="um ceritificado" />
-        <Image src={certificateImg} alt="um ceritificado" />
-        <Image src={certificateImg} alt="um ceritificado" />
+      <main className="m-auto mt-28 max-w-[1200px]">
+        <section className="grid grid-cols-3 gap-6 sm:flex sm:!grid-cols-1 sm:flex-col sm:items-center md:grid-cols-2">
+          <Image src={certificateImg} alt="um ceritificado" />
+          <Image src={certificateImg} alt="um ceritificado" />
+          <Image src={certificateImg} alt="um ceritificado" />
+          <Image src={certificateImg} alt="um ceritificado" />
+          <Image src={certificateImg} alt="um ceritificado" />
+          <Image src={certificateImg} alt="um ceritificado" />
+          <Image src={certificateImg} alt="um ceritificado" />
+          <Image src={certificateImg} alt="um ceritificado" />
+          <Image src={certificateImg} alt="um ceritificado" />
+          <Image src={certificateImg} alt="um ceritificado" />
+          <Image src={certificateImg} alt="um ceritificado" />
+          <Image src={certificateImg} alt="um ceritificado" />
+          <Image src={certificateImg} alt="um ceritificado" />
+          <Image src={certificateImg} alt="um ceritificado" />
+          <Image src={certificateImg} alt="um ceritificado" />
+          <Image src={certificateImg} alt="um ceritificado" />
+          <Image src={certificateImg} alt="um ceritificado" />
+          <Image src={certificateImg} alt="um ceritificado" />
+          <Image src={certificateImg} alt="um ceritificado" />
+          <Image src={certificateImg} alt="um ceritificado" />
+          <Image src={certificateImg} alt="um ceritificado" />
+          <Image src={certificateImg} alt="um ceritificado" />
+          <Image src={certificateImg} alt="um ceritificado" />
+          <Image src={certificateImg} alt="um ceritificado" />
+          <Image src={certificateImg} alt="um ceritificado" />
+          <Image src={certificateImg} alt="um ceritificado" />
+          <Image src={certificateImg} alt="um ceritificado" />
+        </section>
       </main>
     </>
   )

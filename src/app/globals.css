@@ -29,22 +29,15 @@ body, input, textarea, button {
   background-size: cover;
 }
 
-/* Largura e cor da barra de rolagem */
-::-webkit-scrollbar {
-  width: 10px; /* ajuste a largura conforme necessário */
-}
-
-/* Cor de fundo da barra de rolagem */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; /* substitua pela cor desejada */
+  background-color: #030712;
 }
-
-/* Cor do preenchimento da barra de rolagem */
+::-webkit-scrollbar {
+  width: 6px;
+  background: #F4F4F4;
+}
 ::-webkit-scrollbar-thumb {
-  background: #888; /* substitua pela cor desejada */
-}
-
-/* Cor ao passar o mouse sobre a barra de rolagem */
-::-webkit-scrollbar-thumb:hover {
-  background: #555; /* substitua pela cor desejada */
+  background: #6D28D9;
+  height: 300px;
+  border-radius: 20px;
 }
