@@ -1,6 +1,7 @@
 import { TitleSection } from '../TitleSection'
 
 import certificateImg from '@/assets/certificates/cetificate.png'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import { BsArrowRightShort } from 'react-icons/bs'
