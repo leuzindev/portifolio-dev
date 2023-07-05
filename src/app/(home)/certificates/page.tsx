@@ -12,14 +12,14 @@ export default function Certificates() {
 
   return (
     <>
-      <div className="bg-image-header flex min-h-[750px] items-center justify-center">
+      <div className="bg-image-header flex min-h-[750px] items-center justify-center p-6">
         <TitlePage
           title="Meus Certificados"
           subtitle="../certificados"
           description="Aqui você poderá ver alguns dos certificados que obtive. Fique à vontade para explorar e conhecer as conquistas que adquiri ao longo do tempo.."
         />
       </div>
-      <main className="m-auto mt-28 max-w-[1200px]">
+      <main className="m-auto mt-28 max-w-[1200px] p-6">
         <section className="grid grid-cols-3 gap-6 sm:flex sm:!grid-cols-1 sm:flex-col sm:items-center md:grid-cols-2">
           {imagens.map((imagem, index) => (
             <Image
