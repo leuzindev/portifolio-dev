@@ -1,7 +1,7 @@
 import { Project } from '@/components/Project'
 import { TitlePage } from '@/components/TitlePage'
 
-import dtMoney from '@/assets/projects/dtmoney.svg'
+import dtMoney from '@/assets/projects/dtMoney.png'
 const dt_money = ['React', 'Next']
 
 export default function Projects() {

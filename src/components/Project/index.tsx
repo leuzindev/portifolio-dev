@@ -7,7 +7,7 @@ import Image from 'next/image'
 import { BsArrowRightShort } from 'react-icons/bs'
 
 interface ProjectProps {
-  image: string
+  image: any
   title: string
   description: string
   techs: Array<string>
@@ -31,7 +31,7 @@ export function Project({
             reverse ? 'flex-row-reverse' : ''
           } `}
         >
-          <div className="absolute top-1 z-0 -mt-16 mr-36 h-[400px] w-[90vw] bg-decorator md:hidden" />
+          <div className="absolute top-1 z-0 -mt-10 mr-36 h-[400px] w-[90vw] bg-decorator md:hidden" />
           <div className="z-10 mr-4 md:flex md:justify-center">
             <Image src={image} alt="macbook com uma imagem do projeto" />
           </div>
@@ -41,7 +41,7 @@ export function Project({
               <h3 className="text-2xl font-semibold text-grey-1">{title}</h3>
             </div>
             <p className="mb-5 mt-5 text-grey-4">{description}</p>
-            <div className="my-3 mb-8 flex gap-2">
+            <div className="my-3 mb-8 flex max-w-[450px] flex-wrap gap-2">
               {techs.map((tech, index) => (
                 <TechChip content={tech} key={index} />
               ))}
@@ -68,7 +68,7 @@ export function Project({
               <h3 className="text-2xl font-semibold text-grey-1">{title}</h3>
             </div>
             <p className="mb-5 mt-5 text-grey-4">{description}</p>
-            <div className="my-3 mb-8 flex gap-2">
+            <div className="my-3 mb-8 flex max-w-[450px] flex-wrap gap-2">
               {techs.map((tech, index) => (
                 <TechChip content={tech} key={index} />
               ))}

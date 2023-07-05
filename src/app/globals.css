@@ -29,6 +29,9 @@ body, input, textarea, button {
   background-size: cover;
 }
 
+
+/* scrollbar*/
+
 ::-webkit-scrollbar-track {
   background-color: #030712;
 }
@@ -40,4 +43,13 @@ body, input, textarea, button {
   background: #6D28D9;
   height: 300px;
   border-radius: 20px;
+}
+
+/* disable Auto fill blue background */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important; 
+    -webkit-text-fill-color: #333;
 }

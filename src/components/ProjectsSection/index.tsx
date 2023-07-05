@@ -1,13 +1,35 @@
 import Link from 'next/link'
+
 import { Project } from '../Project'
 import { Separator } from '../Separator'
 import { TitleSection } from '../TitleSection'
 
-import dtMoney from '@/assets/projects/dtmoney.svg'
-import gitHub from '@/assets/projects/github.svg'
+import igniteCallImg from '@/assets/projects/igniteCall.png'
+import spaceTimeImg from '@/assets/projects/nlwSpacetime.png'
+import igNewsImg from '@/assets/projects/igNews.png'
+
 import { BsArrowRightShort } from 'react-icons/bs'
 
-const dt_money = ['React', 'Next']
+const spaceTime = [
+  'React',
+  'React Native',
+  'NodeJs',
+  'Next',
+  'Tailwind',
+  'Expo',
+  'Prisma',
+]
+const igniteCall = [
+  'React',
+  'Next',
+  'Next OAuth',
+  'Stitches',
+  'TypeScript',
+  'MySQL',
+  'Prisma',
+]
+
+const igNews = ['React', 'Next', 'Prismic', 'Stripe', 'TypeScript', 'SCSS']
 
 export function ProjectsSection() {
   return (
@@ -15,24 +37,29 @@ export function ProjectsSection() {
       <TitleSection title="Projetos em destaque" subtitle="../destaques" />
       <Separator />
       <Project
-        image={dtMoney}
-        title="DT Money"
-        description="BookWise é uma plataforma de avaliação de livros que foi desenvolvida durante o bootcamp Ignite da Rocketseat. Com apenas um Figma precisávamos desenvolver essa aplicação completa Full Stack com Next.js."
-        techs={dt_money}
+        image={igniteCallImg}
+        title="Ignite Call"
+        description="Ignite Call é uma aplicação que permite agendar compromissos no Google Calendar, 
+        tanto no seu próprio calendário quanto no de outras pessoas. 
+        Além disso, você pode organizar suas tarefas diárias e planejar compromissos futuros."
+        techs={igniteCall}
       />
       <Project
-        image={gitHub}
-        title="DT Money"
-        description="BookWise é uma plataforma de avaliação de livros que foi desenvolvida durante o bootcamp Ignite da Rocketseat. Com apenas um Figma precisávamos desenvolver essa aplicação completa Full Stack com Next.js."
-        techs={dt_money}
+        image={spaceTimeImg}
+        title="SpaceTime"
+        description="Spacetime é uma cápsula do tempo digital com recurso de login usando o GitHub. Armazene fotos, vídeos e mensagens importantes para revisitá-los no futuro.
+        Organize suas memórias por eventos, datas e temas. Reviva seus melhores momentos com Spacetime."
+        techs={spaceTime}
         reverse
         especial
       />
       <Project
-        image={dtMoney}
-        title="DT Money"
-        description="BookWise é uma plataforma de avaliação de livros que foi desenvolvida durante o bootcamp Ignite da Rocketseat. Com apenas um Figma precisávamos desenvolver essa aplicação completa Full Stack com Next.js."
-        techs={dt_money}
+        image={igNewsImg}
+        title="Ig.News"
+        description="Uma newspaper sobre React Topics criada com Next.js, 
+        utilizando o CMS Prismic para gerenciar os posts e 
+        integração com o Stripe para oferecer um plano de assinatura ao usuario."
+        techs={igNews}
       />
       <Separator />
       <Link href="/projects">

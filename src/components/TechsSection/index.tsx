@@ -1,7 +1,8 @@
 import { TechCard } from '../TechCard'
 import { TitleSection } from '../TitleSection'
 
-import { FaReact } from 'react-icons/fa'
+import { SiNextdotjs, SiTypescript, SiJavascript } from 'react-icons/si'
+import { FaReact, FaNodeJs, FaPython, FaVuejs } from 'react-icons/fa'
 
 export function TechSection() {
   return (
@@ -10,43 +11,43 @@ export function TechSection() {
       <div className="mt-12 grid grid-cols-4 gap-4  md:!grid-cols-1 lg:grid-cols-2">
         <TechCard
           tech="React"
-          experience="2 anos de experiência"
+          experience="1 ano de experiência"
           icon={FaReact}
         />
         <TechCard
-          tech="React"
-          experience="2 anos de experiência"
+          tech="Next"
+          experience="1 ano de experiência"
+          icon={SiNextdotjs}
+        />
+        <TechCard
+          tech="React Native"
+          experience="1 ano de experiência"
           icon={FaReact}
         />
         <TechCard
-          tech="React"
-          experience="2 anos de experiência"
-          icon={FaReact}
+          tech="NodeJs"
+          experience="1 ano de experiência"
+          icon={FaNodeJs}
         />
         <TechCard
-          tech="React"
-          experience="2 anos de experiência"
-          icon={FaReact}
+          tech="Python"
+          experience="1 anos de experiência"
+          icon={FaPython}
         />
         <TechCard
-          tech="React"
-          experience="2 anos de experiência"
-          icon={FaReact}
+          tech="VueJs"
+          experience="1 ano de experiência"
+          icon={FaVuejs}
         />
         <TechCard
-          tech="React"
-          experience="2 anos de experiência"
-          icon={FaReact}
+          tech="JavaScript"
+          experience="1 ano de experiência"
+          icon={SiJavascript}
         />
         <TechCard
-          tech="React"
-          experience="2 anos de experiência"
-          icon={FaReact}
-        />
-        <TechCard
-          tech="React"
-          experience="2 anos de experiência"
-          icon={FaReact}
+          tech="TypeScript"
+          experience="1 ano de experiência"
+          icon={SiTypescript}
         />
       </div>
     </>
