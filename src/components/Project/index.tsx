@@ -62,7 +62,7 @@ export function Project({
           <div className="mr-4 md:flex md:justify-center">
             <Image src={image} alt="macbook com uma imagem do projeto" />
           </div>
-          <div className="w-[60%] md:w-auto">
+          <div className="mr-auto w-[60%] md:w-auto">
             <div className="flex items-center gap-2 md:mt-4">
               <Image src={Logo} alt="logo com um L roxo" />
               <h3 className="text-2xl font-semibold text-grey-1">{title}</h3>
