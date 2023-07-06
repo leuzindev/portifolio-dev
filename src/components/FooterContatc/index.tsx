@@ -1,8 +1,15 @@
 import { FormContact } from '../FormContact'
 
-export function FooterContact() {
+interface FooterContactProps {
+  id: string
+}
+
+export function FooterContact({ id }: FooterContactProps) {
   return (
-    <footer className="relative mt-24 flex min-h-[900px] w-full flex-col items-center justify-center bg-footer p-6">
+    <footer
+      id={id}
+      className="relative mt-24 flex min-h-[900px] w-full flex-col items-center justify-center bg-footer p-6"
+    >
       <div className="min-h-[50vh]">
         <div className="mb-8 flex flex-col items-center">
           <p className="text-base text-purple-2">../contato</p>

@@ -1,3 +1,4 @@
+'use client'
 import { TechChip } from '../TechChip'
 
 import Logo from '@/assets/logo.png'
@@ -5,6 +6,9 @@ import Logo from '@/assets/logo.png'
 import Link from 'next/link'
 import Image from 'next/image'
 import { BsArrowRightShort } from 'react-icons/bs'
+
+import { useInView } from 'react-intersection-observer'
+import { motion } from 'framer-motion'
 
 interface ProjectProps {
   image: any
@@ -23,10 +27,33 @@ export function Project({
   reverse,
   especial,
 }: ProjectProps) {
+  const [ref, inView] = useInView({
+    threshold: 0.1,
+  })
+
+  const variants = {
+    hidden: { x: 100 },
+    visible: { x: 0 },
+  }
+
+  const variantsEspecial = {
+    hidden: { x: -100 },
+    visible: { x: 0 },
+  }
+
   return (
     <>
       {especial ? (
-        <div
+        <motion.div
+          ref={ref}
+          initial="hidden"
+          animate={inView ? 'visible' : 'hidden'}
+          variants={variantsEspecial}
+          transition={{
+            type: 'spring',
+            stiffness: 260,
+            damping: 20,
+          }}
           className={`relative my-36 flex sm:my-24 md:flex-col ${
             reverse ? 'flex-row-reverse' : ''
           } `}
@@ -43,7 +70,7 @@ export function Project({
             <p className="mb-5 mt-5 text-grey-4">{description}</p>
             <div className="my-3 mb-8 flex max-w-[450px] flex-wrap gap-2">
               {techs.map((tech, index) => (
-                <TechChip content={tech} key={index} />
+                <TechChip content={tech} key={index} delay={0.1 * index} />
               ))}
             </div>
             <Link href="/" className="flex h-12 ">
@@ -52,9 +79,18 @@ export function Project({
               </span>
             </Link>
           </div>
-        </div>
+        </motion.div>
       ) : (
-        <div
+        <motion.div
+          ref={ref}
+          initial="hidden"
+          animate={inView ? 'visible' : 'hidden'}
+          variants={variants}
+          transition={{
+            type: 'spring',
+            stiffness: 260,
+            damping: 20,
+          }}
           className={`my-36 flex sm:my-24 md:flex-col ${
             reverse ? 'flex-row-reverse' : ''
           } `}
@@ -70,7 +106,7 @@ export function Project({
             <p className="mb-5 mt-5 text-grey-4">{description}</p>
             <div className="my-3 mb-8 flex max-w-[450px] flex-wrap gap-2">
               {techs.map((tech, index) => (
-                <TechChip content={tech} key={index} />
+                <TechChip content={tech} key={index} delay={0.1 * index} />
               ))}
             </div>
             <Link href="/">
@@ -79,7 +115,7 @@ export function Project({
               </span>
             </Link>
           </div>
-        </div>
+        </motion.div>
       )}
     </>
   )

@@ -1,3 +1,4 @@
+'use client'
 import { TechCard } from '../TechCard'
 import { TitleSection } from '../TitleSection'
 
@@ -12,40 +13,48 @@ export function TechSection() {
         <TechCard
           tech="React"
           experience="1 ano de experiência"
+          delay={0.1}
           icon={FaReact}
         />
         <TechCard
           tech="Next"
+          delay={0.2}
           experience="1 ano de experiência"
           icon={SiNextdotjs}
         />
         <TechCard
           tech="React Native"
+          delay={0.3}
           experience="1 ano de experiência"
           icon={FaReact}
         />
         <TechCard
           tech="NodeJs"
+          delay={0.4}
           experience="1 ano de experiência"
           icon={FaNodeJs}
         />
         <TechCard
           tech="Python"
+          delay={0.5}
           experience="1 anos de experiência"
           icon={FaPython}
         />
         <TechCard
           tech="VueJs"
+          delay={0.6}
           experience="1 ano de experiência"
           icon={FaVuejs}
         />
         <TechCard
           tech="JavaScript"
+          delay={0.7}
           experience="1 ano de experiência"
           icon={SiJavascript}
         />
         <TechCard
           tech="TypeScript"
+          delay={0.8}
           experience="1 ano de experiência"
           icon={SiTypescript}
         />

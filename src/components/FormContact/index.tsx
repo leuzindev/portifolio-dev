@@ -18,7 +18,7 @@ export function FormContact() {
         className=" h-44 max-h-[300px] min-h-[100px] w-full rounded-lg bg-inputs p-4 text-grey-1"
         placeholder="Mensagem"
       />
-      <ButtonPrimary.Root className="!mt-12">
+      <ButtonPrimary.Root href="#send" className="!mt-12">
         <ButtonPrimary.Content label="Enviar mensagem" />
         <ButtonPrimary.Icon icon={BsArrowRightShort} />
       </ButtonPrimary.Root>

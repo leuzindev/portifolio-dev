@@ -1,3 +1,4 @@
+'use client'
 import { TitleSection } from '../TitleSection'
 
 import certificate1Img from '@/assets/certificates/certificado_25.png'
@@ -11,7 +12,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { BsArrowRightShort } from 'react-icons/bs'
 
-export default function CertificatesSection() {
+export function CertificatesSection() {
   return (
     <div className="mt-24">
       <TitleSection

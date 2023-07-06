@@ -14,16 +14,22 @@
     "@types/react-dom": "18.2.6",
     "autoprefixer": "10.4.14",
     "eslint-config-next": "13.4.7",
+    "framer-motion": "^10.12.18",
     "next": "13.4.7",
     "postcss": "8.4.24",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.10.1",
+    "react-intersection-observer": "^9.5.2",
+    "react-scroll": "^1.8.9",
+    "react-ts-typewriter": "^0.1.8-b",
     "tailwindcss": "3.3.2",
     "typescript": "5.1.6"
   },
   "devDependencies": {
     "@rocketseat/eslint-config": "^1.2.0",
+    "@types/react-burger-menu": "^2.8.3",
+    "@types/react-scroll": "^1.8.7",
     "eslint": "^8.43.0",
     "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.3.0"

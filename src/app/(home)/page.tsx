@@ -1,4 +1,4 @@
-import CertificatesSection from '@/components/CertificatesSection'
+import { CertificatesSection } from '@/components/CertificatesSection'
 import { Hero } from '@/components/Hero'
 import { ProjectsSection } from '@/components/ProjectsSection'
 import { TechSection } from '@/components/TechsSection'

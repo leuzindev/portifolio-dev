@@ -1,20 +1,37 @@
+'use client'
 import Image from 'next/image'
 
 import MeImg from '@/assets/me.png'
+
 import { TechChip } from '@/components/TechChip'
 import { ButtonPrimary } from '@/components/ButtonPrimary'
 
 import { BsArrowRightShort } from 'react-icons/bs'
 import { FaWhatsapp, FaLinkedin, FaGithub } from 'react-icons/fa'
+
 import Link from 'next/link'
 
+import Typewriter from 'react-ts-typewriter'
+
+import { useInView } from 'react-intersection-observer'
+import { motion } from 'framer-motion'
+
 export function Hero() {
+  const [ref, inView] = useInView({
+    threshold: 0.1,
+  })
+
+  const variants = {
+    hidden: { opacity: 0, x: -300 },
+    visible: { opacity: 1, x: 0 },
+  }
+
   return (
     <>
       <div className="mt-20 lg:mt-10">
         <h5 className="mb-2 text-base text-purple-1">Olá, meu nome é</h5>
-        <h1 className="mb-6 text-4xl font-medium text-grey-1">
-          Leonardo Soares
+        <h1 className="mb-6 font-body text-4xl font-medium text-grey-1 sm:text-3xl">
+          <Typewriter text="Leonardo Soares. " />
         </h1>
 
         <p className="w-[500px] text-base leading-7 text-grey-4 lg:w-auto">
@@ -26,17 +43,17 @@ export function Hero() {
         </p>
         <div className="mt-6 flex flex-col">
           <div className="flex space-x-3">
-            <TechChip content="React" />
-            <TechChip content="Next.js" />
-            <TechChip content="Tailwind" />
+            <TechChip content="React" delay={0.2} />
+            <TechChip content="Next.js" delay={0.4} />
+            <TechChip content="Tailwind" delay={0.6} />
           </div>
           <div className="mt-3 flex space-x-3">
-            <TechChip content="React native" />
-            <TechChip content="Typescript" />
+            <TechChip content="React native" delay={0.8} />
+            <TechChip content="Typescript" delay={1} />
           </div>
         </div>
         <div className="mt-12 flex">
-          <ButtonPrimary.Root>
+          <ButtonPrimary.Root href="contact">
             <ButtonPrimary.Content label="Entre em contato" />
             <ButtonPrimary.Icon icon={BsArrowRightShort} />
           </ButtonPrimary.Root>
@@ -54,13 +71,24 @@ export function Hero() {
           </div>
         </div>
       </div>
-      <div className="-mb-64 lg:mb-0">
+      <motion.div
+        ref={ref}
+        initial="hidden"
+        animate={inView ? 'visible' : 'hidden'}
+        variants={variants}
+        transition={{
+          type: 'spring',
+          stiffness: 260,
+          damping: 20,
+        }}
+        className="-mb-64 lg:mb-0"
+      >
         <Image
           src={MeImg}
           alt="uma pessoa branca olhando para o chao"
           className="lg:w-1/2"
         />
-      </div>
+      </motion.div>
     </>
   )
 }
