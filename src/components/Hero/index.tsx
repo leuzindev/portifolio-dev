@@ -21,10 +21,17 @@ export function Hero() {
     threshold: 0.1,
   })
 
-  const variants = {
-    hidden: { opacity: 0, x: -300 },
-    visible: { opacity: 1, x: 0 },
-  }
+  const isMobile = window.innerWidth <= 768
+
+  const variants = isMobile
+    ? {
+        hidden: { opacity: 0 },
+        visible: { opacity: 1 },
+      }
+    : {
+        hidden: { opacity: 0, x: -300 },
+        visible: { opacity: 1, x: 0 },
+      }
 
   return (
     <>

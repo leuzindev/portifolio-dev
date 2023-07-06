@@ -31,15 +31,27 @@ export function Project({
     threshold: 0.1,
   })
 
-  const variants = {
-    hidden: { x: 100 },
-    visible: { x: 0 },
-  }
+  const isMobile = window.innerWidth <= 768
 
-  const variantsEspecial = {
-    hidden: { x: -100 },
-    visible: { x: 0 },
-  }
+  const variants = isMobile
+    ? {
+        hidden: { opacity: 0 },
+        visible: { opacity: 1 },
+      }
+    : {
+        hidden: { x: 100 },
+        visible: { x: 0 },
+      }
+
+  const variantsEspecial = isMobile
+    ? {
+        hidden: { opacity: 0 },
+        visible: { opacity: 1 },
+      }
+    : {
+        hidden: { x: -100 },
+        visible: { x: 0 },
+      }
 
   return (
     <>
@@ -63,9 +75,9 @@ export function Project({
             <Image src={image} alt="macbook com uma imagem do projeto" />
           </div>
           <div className="z-10 w-[60%]  md:w-auto">
-            <div className="flex items-center gap-2 md:mt-4">
+            <div className="flex items-center gap-2 md:mt-10">
               <Image src={Logo} alt="logo com um L roxo" />
-              <h3 className="text-2xl font-semibold text-grey-1">{title}</h3>
+              <h3 className="text-2xl font-semibold text-grey-1 ">{title}</h3>
             </div>
             <p className="mb-5 mt-5 text-grey-4">{description}</p>
             <div className="my-3 mb-8 flex max-w-[450px] flex-wrap gap-2">
@@ -99,7 +111,7 @@ export function Project({
             <Image src={image} alt="macbook com uma imagem do projeto" />
           </div>
           <div className="mr-auto w-[60%] md:w-auto">
-            <div className="flex items-center gap-2 md:mt-4">
+            <div className="flex items-center gap-2 md:mt-10">
               <Image src={Logo} alt="logo com um L roxo" />
               <h3 className="text-2xl font-semibold text-grey-1">{title}</h3>
             </div>
