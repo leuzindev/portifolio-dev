@@ -9,7 +9,6 @@ import { BsArrowRightShort } from 'react-icons/bs'
 
 import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
-
 interface ProjectProps {
   image: any
   title: string
@@ -31,27 +30,25 @@ export function Project({
     threshold: 0.1,
   })
 
-  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768
+  // {
+  //   hidden: { x: 100 },
+  //   visible: { x: 0 },
+  // }
 
-  const variants = isMobile
-    ? {
-        hidden: { opacity: 0 },
-        visible: { opacity: 1 },
-      }
-    : {
-        hidden: { x: 100 },
-        visible: { x: 0 },
-      }
+  // {
+  //   hidden: { x: -100 },
+  //   visible: { x: 0 },
+  // }
 
-  const variantsEspecial = isMobile
-    ? {
-        hidden: { opacity: 0 },
-        visible: { opacity: 1 },
-      }
-    : {
-        hidden: { x: -100 },
-        visible: { x: 0 },
-      }
+  const variantsMobile = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  }
+
+  const variantsEspecial = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  }
 
   return (
     <>
@@ -97,7 +94,7 @@ export function Project({
           ref={ref}
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}
-          variants={variants}
+          variants={variantsMobile}
           transition={{
             type: 'spring',
             stiffness: 260,

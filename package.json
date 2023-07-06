@@ -21,6 +21,7 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.10.1",
     "react-intersection-observer": "^9.5.2",
+    "react-responsive": "^9.0.2",
     "react-scroll": "^1.8.9",
     "react-ts-typewriter": "^0.1.8-b",
     "tailwindcss": "3.3.2",

@@ -21,17 +21,10 @@ export function Hero() {
     threshold: 0.1,
   })
 
-  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768
-
-  const variants = isMobile
-    ? {
-        hidden: { opacity: 0 },
-        visible: { opacity: 1 },
-      }
-    : {
-        hidden: { opacity: 0, x: -300 },
-        visible: { opacity: 1, x: 0 },
-      }
+  const variantsMobile = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  }
 
   return (
     <>
@@ -82,7 +75,7 @@ export function Hero() {
         ref={ref}
         initial="hidden"
         animate={inView ? 'visible' : 'hidden'}
-        variants={variants}
+        variants={variantsMobile}
         transition={{
           type: 'spring',
           stiffness: 260,
