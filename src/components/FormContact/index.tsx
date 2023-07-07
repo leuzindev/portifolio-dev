@@ -36,9 +36,7 @@ export function FormContact() {
 
   async function handleEmail(data: ContactFormData) {
     setIsLoading(true)
-    toast.success('Email enviado com sucesso!', {
-      theme: 'colored',
-    })
+
     const templateParams = {
       from_name: data.name,
       email: data.email,
@@ -54,6 +52,9 @@ export function FormContact() {
       )
 
       setIsLoading(false)
+      toast.success('Email enviado com sucesso!', {
+        theme: 'colored',
+      })
     } catch (error) {
       toast.error('Erro ao enviar o email. Por favor, tente novamente.', {
         theme: 'colored',
