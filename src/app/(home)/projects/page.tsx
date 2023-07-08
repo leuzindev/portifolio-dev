@@ -60,6 +60,7 @@ export default function Projects() {
             utilizando o CMS Prismic para gerenciar os posts e 
             integração com o Stripe para oferecer um plano de assinatura ao usuario."
             techs={igNews}
+            repo="https://github.com/leuzindev/ig.news"
           />
           <Project
             image={igniteCallImg}
@@ -68,6 +69,8 @@ export default function Projects() {
             tanto no seu próprio calendário quanto no de outras pessoas. 
             Além disso, você pode organizar suas tarefas diárias e planejar compromissos futuros."
             techs={igniteCall}
+            repo="https://github.com/leuzindev/ignite-call"
+            projectOnline="https://ignite-call-peach.vercel.app/"
           />
           <Project
             image={nlwSpacetimeImg}
@@ -77,6 +80,7 @@ export default function Projects() {
             techs={spaceTime}
             reverse
             especial
+            repo="https://github.com/leuzindev/nlwspacetime"
           />
           <Project
             image={coffeDeliveryImg}
@@ -86,6 +90,8 @@ export default function Projects() {
             Uma solução perfeita para os amantes de café em busca de praticidade."
             techs={coffeDelivery}
             reverse
+            repo="https://github.com/leuzindev/coffe-delivery"
+            projectOnline="https://coffe-delivery-ashy.vercel.app/"
           />
           <Project
             image={dtMoneyImg}
@@ -95,6 +101,8 @@ export default function Projects() {
             calculando o saldo total com base nos dados inseridos. Com busca facilitada e interface intuitiva,
             o DT Money ajuda a manter o controle das finanças de forma eficiente."
             techs={DtMoney}
+            repo="https://github.com/leuzindev/dtmoney"
+            projectOnline="https://dtmoney-ten-puce.vercel.app/"
           />
           <Project
             image={igniteTimerImg}
@@ -103,6 +111,8 @@ export default function Projects() {
             Além disso, ele oferece um histórico completo de todas as tarefas já realizadas, permitindo aos usuários acompanhar seu progresso.
             Também é possível remover tarefas quando necessário. Melhore sua produtividade com o Ignite Timer."
             techs={igniteTimer}
+            repo="https://github.com/leuzindev/ignite-timer"
+            projectOnline="https://ignite-timer-bice.vercel.app/"
           />
           <Project
             image={cineFlowImg}
@@ -112,6 +122,7 @@ export default function Projects() {
             Desfrute de horas de diversão com o Cine Flow."
             techs={cineflow}
             reverse
+            repo="https://github.com/leuzindev/Cineflow"
           />
           <Project
             image={todoListImg}
@@ -123,6 +134,8 @@ export default function Projects() {
             Simplifique sua vida com o TODO e torne seu dia mais produtivo."
             techs={todo}
             reverse
+            repo="https://github.com/leuzindev/todolist-challenge"
+            projectOnline="https://todolist-challenge-lime.vercel.app/"
           />
         </section>
       </main>

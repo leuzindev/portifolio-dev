@@ -5,10 +5,14 @@ import Logo from '@/assets/logo.png'
 
 import Link from 'next/link'
 import Image from 'next/image'
+
 import { BsArrowRightShort } from 'react-icons/bs'
+import { RiGlobalLine } from 'react-icons/ri'
 
 import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
+import { FaGithub } from 'react-icons/fa'
+
 interface ProjectProps {
   image: any
   title: string
@@ -16,6 +20,8 @@ interface ProjectProps {
   techs: Array<string>
   reverse?: boolean
   especial?: boolean
+  repo?: string
+  projectOnline?: string
 }
 
 export function Project({
@@ -25,20 +31,12 @@ export function Project({
   techs,
   reverse,
   especial,
+  repo,
+  projectOnline,
 }: ProjectProps) {
   const [ref, inView] = useInView({
     threshold: 0.1,
   })
-
-  // {
-  //   hidden: { x: 100 },
-  //   visible: { x: 0 },
-  // }
-
-  // {
-  //   hidden: { x: -100 },
-  //   visible: { x: 0 },
-  // }
 
   const variantsMobile = {
     hidden: { opacity: 0 },
@@ -82,11 +80,13 @@ export function Project({
                 <TechChip content={tech} key={index} delay={0.1 * index} />
               ))}
             </div>
-            <Link href="/" className="flex h-12 ">
-              <span className="flex items-center gap-1 rounded-md bg-purple-4 px-4 text-grey-1">
-                Ver projeto <BsArrowRightShort />
-              </span>
-            </Link>
+            {repo && (
+              <Link href={repo} className="flex h-12" target="_blank">
+                <span className="flex items-center gap-2 rounded-md bg-purple-4 px-4 text-grey-1 transition-colors hover:bg-purple-5">
+                  Ver repositorio <FaGithub />
+                </span>
+              </Link>
+            )}
           </div>
         </motion.div>
       ) : (
@@ -118,11 +118,22 @@ export function Project({
                 <TechChip content={tech} key={index} delay={0.1 * index} />
               ))}
             </div>
-            <Link href="/">
-              <span className="flex items-center gap-1 text-purple-1">
-                Ver projeto <BsArrowRightShort />
-              </span>
-            </Link>
+            <div className="flex items-center justify-between gap-4">
+              {projectOnline && (
+                <Link href={projectOnline} target="_blank">
+                  <span className="flex items-center gap-2 text-purple-1 transition-colors hover:text-purple-4">
+                    Ver projeto Online <RiGlobalLine />
+                  </span>
+                </Link>
+              )}
+              {repo && (
+                <Link href={repo} target="_blank">
+                  <span className="flex items-center gap-1 text-purple-1 transition-colors hover:text-purple-4">
+                    Repositorio <BsArrowRightShort />
+                  </span>
+                </Link>
+              )}
+            </div>
           </div>
         </motion.div>
       )}

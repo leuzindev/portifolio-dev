@@ -10,10 +10,10 @@ export function FooterContact({ id }: FooterContactProps) {
       id={id}
       className="relative mt-24 flex min-h-[900px] w-full flex-col items-center justify-center bg-footer p-6"
     >
-      <div className="min-h-[50vh]">
-        <div className="mb-8 flex flex-col items-center">
+      <div className="min-h-[50vh] w-[450px] sm:w-[90%]">
+        <div className="mb-8 flex flex-col items-center ">
           <p className="text-base text-purple-2">../contato</p>
-          <h3 className="mt-5 text-center text-2xl font-semibold text-grey-1">
+          <h3 className="mt-5 text-center text-2xl font-semibold text-grey-1 sm:text-xl">
             Vamos trabalhar juntos?
             <br /> Entre em contato
           </h3>

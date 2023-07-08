@@ -67,7 +67,9 @@ export function Hero() {
             >
               <FaLinkedin className="text-grey-6" size="20" />
             </Link>
-            <FaWhatsapp className="text-grey-6" size="20" />
+            <Link href="https://wa.me/5511992909966?text=Ola%20encontrei%20seu%20perfil%20pelo%20portf%C3%B3lio,%20gostaria%20de%20marcar%20uma%20reuni%C3%A3o%20">
+              <FaWhatsapp className="text-grey-6" size="20" />
+            </Link>
           </div>
         </div>
       </div>

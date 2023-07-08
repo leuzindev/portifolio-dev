@@ -38,13 +38,17 @@ export function TechCard({
         damping: 20,
         delay,
       }}
-      className="rounded-md bg-card p-5"
+      className="group rounded-md bg-card p-5 transition-colors hover:bg-[#293349]"
     >
       <div className="mb-4 flex items-center justify-between">
-        <p className="text-grey-5">{tech}</p>
-        <Icon className="text-grey-5" />
+        <p className="text-grey-5 transition-colors group-hover:text-purple-4">
+          {tech}
+        </p>
+        <Icon className="text-grey-5 transition-colors group-hover:text-purple-4" />
       </div>
-      <span className=" text-grey-5">{experience}</span>
+      <span className=" text-grey-5 transition-colors group-hover:text-purple-4">
+        {experience}
+      </span>
     </motion.div>
   )
 }

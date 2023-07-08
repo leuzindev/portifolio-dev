@@ -43,6 +43,8 @@ export function ProjectsSection() {
         tanto no seu próprio calendário quanto no de outras pessoas. 
         Além disso, você pode organizar suas tarefas diárias e planejar compromissos futuros."
         techs={igniteCall}
+        projectOnline="https://ignite-call-peach.vercel.app/"
+        repo="https://github.com/leuzindev/ignite-call"
       />
       <Project
         image={spaceTimeImg}
@@ -52,6 +54,7 @@ export function ProjectsSection() {
         techs={spaceTime}
         reverse
         especial
+        repo="https://github.com/leuzindev/nlwspacetime"
       />
       <Project
         image={igNewsImg}
@@ -60,6 +63,7 @@ export function ProjectsSection() {
         utilizando o CMS Prismic para gerenciar os posts e 
         integração com o Stripe para oferecer um plano de assinatura ao usuario."
         techs={igNews}
+        repo="https://github.com/leuzindev/ig.news"
       />
       <Separator />
       <Link href="/projects">

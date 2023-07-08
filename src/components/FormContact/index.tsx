@@ -1,22 +1,21 @@
 'use client'
 import { BsArrowRightShort } from 'react-icons/bs'
 import { ButtonPrimary } from '../ButtonPrimary'
+
 import { useForm } from 'react-hook-form'
+import { useState } from 'react'
 
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 
 import emailJs from '@emailjs/browser'
 
+import { Comment } from 'react-loader-spinner'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
-import { useState } from 'react'
-
-import { Comment } from 'react-loader-spinner'
-
 const contactFormSchema = z.object({
-  name: z.string(),
+  name: z.string().min(5, 'Seu nome deve ter pelo menos 5 caracteres'),
   email: z.string().email(),
   message: z.string(),
 })
@@ -29,7 +28,7 @@ export function FormContact() {
   const {
     register,
     handleSubmit,
-    formState: { isSubmitting },
+    formState: { isSubmitting, errors },
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
   })
@@ -63,26 +62,32 @@ export function FormContact() {
   }
   return (
     <form
-      className="flex flex-col items-center space-y-4"
+      className="flex flex-col items-center space-y-4 "
       onSubmit={handleSubmit(handleEmail)}
     >
       <input
         type="text"
         className="h-14 w-full rounded-lg bg-inputs p-4 text-grey-1"
         placeholder="Nome"
+        required
         {...register('name')}
       />
       <input
         type="email"
         className="h-14 w-full rounded-lg bg-inputs p-4 text-grey-1"
         placeholder="E-mail"
+        required
         {...register('email')}
       />
       <textarea
         className=" h-44 max-h-[300px] min-h-[100px] w-full rounded-lg bg-inputs p-4 text-grey-1"
         placeholder="Mensagem"
+        required
         {...register('message')}
       />
+      {errors.name && (
+        <span className="text-red-500">{errors.name.message}</span>
+      )}
       <ButtonPrimary.Root
         disabled={isSubmitting}
         href="#send"
