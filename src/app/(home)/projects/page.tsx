@@ -10,36 +10,16 @@ import igniteTimerImg from '@/assets/projects/igniteTimer.png'
 import nlwSpacetimeImg from '@/assets/projects/nlwSpacetime.png'
 import todoListImg from '@/assets/projects/todoList.png'
 
-const spaceTime = [
-  'React',
-  'React Native',
-  'NodeJs',
-  'Next',
-  'Tailwind',
-  'Expo',
-  'Prisma',
-]
-const igniteCall = [
-  'React',
-  'Next',
-  'Next OAuth',
-  'Stitches',
-  'TypeScript',
-  'MySQL',
-  'Prisma',
-]
-
-const igNews = ['React', 'Next', 'Prismic', 'Stripe', 'TypeScript', 'SCSS']
-
-const coffeDelivery = ['Next', 'Typescript', 'Tailwind', 'React', 'Redux']
-
-const DtMoney = ['React', 'Typescript', 'Vite', 'Styled Components', 'Zod']
-
-const igniteTimer = ['React', 'Typescript', 'Vite', 'Styled Components', 'Zod']
-
-const cineflow = ['React Native', 'Typescript', 'Expo', 'Styled Components']
-
-const todo = ['React', 'Next', 'Typescript', 'Tailwind', 'Zod', 'Redux']
+import {
+  igNews,
+  igniteCall,
+  spaceTime,
+  coffeDelivery,
+  DtMoney,
+  igniteTimer,
+  cineflow,
+  todo,
+} from '@/utils/techs'
 
 export default function Projects() {
   return (

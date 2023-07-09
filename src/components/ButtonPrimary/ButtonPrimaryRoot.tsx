@@ -1,5 +1,5 @@
 'use client'
-// import { Link } from 'react-scroll'
+import { Link } from 'react-scroll'
 
 import { ButtonHTMLAttributes, ReactNode } from 'react'
 
@@ -17,14 +17,14 @@ export function ButtonPrimaryRoot({
   ...rest
 }: ButtonPrimaryRootProps) {
   return (
-    // <Link to={href} smooth={true}>
-    <button
-      {...rest}
-      className={`${className} flex h-12 items-center justify-center rounded-md bg-purple-4 px-3 shadow-button  transition-colors hover:bg-purple-2
+    <Link to={href} smooth={true}>
+      <button
+        {...rest}
+        className={`${className} flex h-12 items-center justify-center rounded-md bg-purple-4 px-3 shadow-button  transition-colors hover:bg-purple-2
       `}
-    >
-      {children}
-    </button>
-    // </Link>
+      >
+        {children}
+      </button>
+    </Link>
   )
 }

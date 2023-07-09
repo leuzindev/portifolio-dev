@@ -26,8 +26,8 @@ export default function Certificates() {
               key={index}
               src={imagem}
               alt={`Certificado ${index + 1}`}
-              width={500}
-              height={300} // Define a imagem de carregamento
+              width={368}
+              height={259}
             />
           ))}
         </section>
