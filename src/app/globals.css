@@ -12,6 +12,10 @@ html {
   box-sizing: border-box;
 }
 
+input:focus, textarea:focus, button:focus{
+  outline: 2px solid #8643EE;
+}
+
 
 
 body{
@@ -30,7 +34,6 @@ body, input, textarea, button {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 
 /* scrollbar*/
 
@@ -65,4 +68,35 @@ input:-webkit-autofill:active {
   background: #D3B7FF;
   transform-origin: 0%;
 
+}
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+}
+
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.shadow-gradient {
+  box-shadow: 0px 1px 78px 7px rgba(109, 40, 217, 0.57), 0px 1px 31px 19px rgba(28, 0, 72, 0.29);
 }

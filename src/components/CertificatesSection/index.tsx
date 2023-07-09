@@ -1,12 +1,12 @@
 'use client'
 import { TitleSection } from '../TitleSection'
 
-import certificate1Img from '@/assets/certificates/certificado_25.png'
-import certificate2Img from '@/assets/certificates/certificado_20.png'
-import certificate3Img from '@/assets/certificates/certificado_28.png'
+import certificate1Img from '@/assets/certificates/certificado_1.png'
+import certificate2Img from '@/assets/certificates/certificado_2.png'
+import certificate3Img from '@/assets/certificates/certificado_3.png'
 import certificate4Img from '@/assets/certificates/certificado_4.png'
-import certificate5Img from '@/assets/certificates/certificado_16.png'
-import certificate6Img from '@/assets/certificates/certificado_38.png'
+import certificate5Img from '@/assets/certificates/certificado_5.png'
+import certificate6Img from '@/assets/certificates/certificado_6.png'
 
 import Image from 'next/image'
 import Link from 'next/link'

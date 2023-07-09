@@ -1,11 +1,21 @@
+'use client'
+
 import { TitlePage } from '@/components/TitlePage'
 
 import Image from 'next/image'
 
+import { Pagination, Navigation } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/react'
+
+// Import Swiper styles
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
+
 export default function Certificates() {
   const imagens = []
 
-  for (let i = 1; i <= 54; i++) {
+  for (let i = 1; i <= 17; i++) {
     const imagem = require(`@/assets/certificates/certificado_${i}.png`)
     imagens.push(imagem)
   }
@@ -20,16 +30,21 @@ export default function Certificates() {
         />
       </div>
       <main className="m-auto mt-28 max-w-[1200px] p-6">
-        <section className="grid grid-cols-3 gap-6 sm:flex sm:!grid-cols-1 sm:flex-col sm:items-center md:grid-cols-2">
-          {imagens.map((imagem, index) => (
-            <Image
-              key={index}
-              src={imagem}
-              alt={`Certificado ${index + 1}`}
-              width={368}
-              height={259}
-            />
-          ))}
+        <section className="flex justify-center">
+          <Swiper
+            pagination={{
+              type: 'fraction',
+            }}
+            navigation={true}
+            modules={[Pagination, Navigation]}
+            className="mySwiper shadow-gradient flex justify-center"
+          >
+            {imagens.map((imagem, index) => (
+              <SwiperSlide key={index}>
+                <Image src={imagem} alt={`Certificado ${index + 1}`} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </section>
       </main>
     </>
