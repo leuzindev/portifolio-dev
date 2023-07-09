@@ -1,3 +1,4 @@
+import { ButtonPushToTop } from '../ButtonPushToTop'
 import { FormContact } from '../FormContact'
 
 interface FooterContactProps {
@@ -23,6 +24,7 @@ export function FooterContact({ id }: FooterContactProps) {
       <h5 className="absolute bottom-3 text-grey-4">
         Made with 💜 by Leuzindev
       </h5>
+      <ButtonPushToTop />
     </footer>
   )
 }

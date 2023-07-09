@@ -3,6 +3,8 @@ import { BsArrowRightShort } from 'react-icons/bs'
 import { ButtonPrimary } from '../ButtonPrimary'
 
 import { useForm } from 'react-hook-form'
+import 'react-toastify/dist/ReactToastify.css'
+
 import { useState } from 'react'
 
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -12,7 +14,6 @@ import emailJs from '@emailjs/browser'
 
 import { Comment } from 'react-loader-spinner'
 import { ToastContainer, toast } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
 
 const contactFormSchema = z.object({
   name: z.string().min(5, 'Seu nome deve ter pelo menos 5 caracteres'),
@@ -28,6 +29,7 @@ export function FormContact() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { isSubmitting, errors },
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
@@ -53,10 +55,15 @@ export function FormContact() {
       setIsLoading(false)
       toast.success('Email enviado com sucesso!', {
         theme: 'colored',
+        closeButton: false,
+        draggable: false,
       })
+      reset()
     } catch (error) {
       toast.error('Erro ao enviar o email. Por favor, tente novamente.', {
         theme: 'colored',
+        closeButton: false,
+        draggable: false,
       })
     }
   }
@@ -88,11 +95,7 @@ export function FormContact() {
       {errors.name && (
         <span className="text-red-500">{errors.name.message}</span>
       )}
-      <ButtonPrimary.Root
-        disabled={isSubmitting}
-        href="#send"
-        className="!mt-12"
-      >
+      <ButtonPrimary.Root disabled={isSubmitting} className="!mt-12">
         {isLoading ? (
           <>
             <ButtonPrimary.Content label="Enviando e-mail" />

@@ -65,7 +65,18 @@ export function Project({
             reverse ? 'flex-row-reverse' : ''
           } `}
         >
-          <div className="absolute top-1 z-0 -mt-10 mr-36 h-[400px] w-[90vw] bg-decorator md:hidden" />
+          <motion.div
+            ref={ref}
+            initial="hidden"
+            animate={inView ? 'visible' : 'hidden'}
+            variants={variantsMobile}
+            transition={{
+              type: 'spring',
+              stiffness: 260,
+              damping: 20,
+            }}
+            className="absolute top-1 z-0 -mt-10 mr-36 h-[400px] w-[90vw] bg-decorator md:hidden"
+          />
           <div className="z-10 mr-4 md:flex md:justify-center">
             <Image src={image} alt="macbook com uma imagem do projeto" />
           </div>

@@ -14,7 +14,7 @@ export default function Layout({ children }: { children: ReactNode }) {
   })
   return (
     <>
-      <motion.div className="progress-bar z-50 bg-red-300" style={{ scaleX }} />
+      <motion.div className="progress-bar z-50" style={{ scaleX }} />
 
       <HeaderNav />
       <main className="min-h-screen font-body">{children}</main>
