@@ -35,9 +35,9 @@ export function Hero() {
         </h1>
 
         <p className="w-[500px] text-base leading-7 text-grey-4 lg:w-auto">
-          Sou um desenvolvedor front-end apaixonado por tecnologia. Com mais de{' '}
-          <strong>1 ano de experiência.</strong> Meu objetivo é criar interfaces
-          de usuário bonitas e funcionais, além de liderar equipes técnicas em
+          Sou um desenvolvedor full-stack apaixonado por tecnologia. Com mais de{' '}
+          <strong>1 ano de experiência.</strong> Meu objetivo é criar sistemas
+          escalaveis e performáticos, além de liderar equipes técnicas em
           projetos desafiadores. Estou sempre aberto a novas oportunidades e
           desafios.
         </p>
