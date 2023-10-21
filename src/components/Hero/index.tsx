@@ -45,7 +45,7 @@ export function Hero() {
           <div className="flex space-x-3">
             <TechChip content="React" delay={0.2} />
             <TechChip content="Next.js" delay={0.4} />
-            <TechChip content="Tailwind" delay={0.6} />
+            <TechChip content="Python" delay={0.6} />
           </div>
           <div className="mt-3 flex space-x-3">
             <TechChip content="React native" delay={0.8} />
