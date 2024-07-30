@@ -36,7 +36,7 @@ export function Hero() {
 
         <p className="w-[500px] text-base leading-7 text-grey-4 lg:w-auto">
           Sou um desenvolvedor full-stack apaixonado por tecnologia. Com mais de{' '}
-          <strong>1 ano de experiência.</strong> Meu objetivo é criar sistemas
+          <strong>3 anos de experiência.</strong> Meu objetivo é criar sistemas
           escalaveis e performáticos, além de liderar equipes técnicas em
           projetos desafiadores. Estou sempre aberto a novas oportunidades e
           desafios.
