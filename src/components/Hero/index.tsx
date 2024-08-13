@@ -86,12 +86,12 @@ export function Hero() {
           stiffness: 260,
           damping: 20,
         }}
-        className="-mb-64 lg:mb-0"
+        className="-mb-64 flex justify-end lg:mb-0  lg:justify-start"
       >
         <Image
           src={MeImg}
           alt="uma pessoa branca olhando para o chao"
-          className="lg:w-1/2"
+          className="w-[90%] rounded-3xl opacity-50 shadow-xl lg:w-1/2"
         />
       </motion.div>
     </>

@@ -24,14 +24,14 @@ import {
 export default function Projects() {
   return (
     <>
-      <div className="bg-image-header flex min-h-[750px] items-center justify-center p-6">
+      <div className="bg-image-header flex min-h-[550px] items-center justify-center p-6">
         <TitlePage
           title="Meus Projetos"
           subtitle="../projetos"
           description="Aqui você poderá ver alguns dos trabalhos que eu desenvolvi. Navegue à vontade e explore os projetos para ver como foram criados, as tecnologias utilizadas e as funcionalidades implementadas."
         />
       </div>
-      <main className="m-auto mt-28 max-w-[1200px] p-6">
+      <main className="m-auto max-w-[1200px] p-6">
         <section className="">
           <Project
             image={igNewsImg}
@@ -59,7 +59,6 @@ export default function Projects() {
             Organize suas memórias por eventos, datas e temas. Reviva seus melhores momentos com Spacetime."
             techs={spaceTime}
             reverse
-            especial
             repo="https://github.com/leuzindev/nlwspacetime"
           />
           <Project

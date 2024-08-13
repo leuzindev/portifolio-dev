@@ -53,7 +53,6 @@ export function ProjectsSection() {
         Organize suas memórias por eventos, datas e temas. Reviva seus melhores momentos com Spacetime."
         techs={spaceTime}
         reverse
-        especial
         repo="https://github.com/leuzindev/nlwspacetime"
       />
       <Project
